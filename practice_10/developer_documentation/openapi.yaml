@@ -1,0 +1,245 @@
+openapi: 3.0.3
+info:
+  title: Legal Store API
+  version: 1.0.0
+  description: API documentation for the Legal Store Next.js application.
+servers:
+  - url: http://localhost:3000
+paths:
+  /api/auth/register:
+    post:
+      summary: Register user
+      tags: [Auth]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [email, password]
+              properties:
+                email:
+                  type: string
+                  format: email
+                password:
+                  type: string
+                  minLength: 6
+                  maxLength: 200
+                name:
+                  type: string
+                  maxLength: 100
+      responses:
+        "200":
+          description: User created
+        "400":
+          description: Invalid request
+        "409":
+          description: Email already taken
+        "429":
+          description: Rate limit exceeded
+  /api/checkout/create-payment:
+    post:
+      summary: Create payment checkout
+      tags: [Checkout]
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  format: email
+                locale:
+                  type: string
+      responses:
+        "200":
+          description: Checkout created
+        "400":
+          description: Checkout error
+        "429":
+          description: Rate limit exceeded
+  /api/digiseller/callback:
+    post:
+      summary: Digiseller payment webhook
+      tags: [Digiseller]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                amount:
+                  type: string
+                currency:
+                  type: string
+                invoice_id:
+                  type: string
+                status:
+                  type: string
+                signature:
+                  type: string
+                cf1:
+                  type: string
+      responses:
+        "200":
+          description: Callback accepted
+        "400":
+          description: Bad payload
+        "401":
+          description: Bad signature
+  /api/digiseller/return:
+    get:
+      summary: Digiseller return URL
+      tags: [Digiseller]
+      parameters:
+        - in: query
+          name: cf1
+          schema:
+            type: string
+        - in: query
+          name: status
+          schema:
+            type: string
+            enum: [success, fail]
+        - in: query
+          name: id_o
+          schema:
+            type: string
+      responses:
+        "307":
+          description: Redirect to order, checkout error, or home page
+  /api/favorites:
+    get:
+      summary: Get user favorites
+      tags: [Favorites]
+      security:
+        - nextAuthCookie: []
+      parameters:
+        - in: query
+          name: ids
+          schema:
+            type: string
+          description: Comma-separated product IDs
+      responses:
+        "200":
+          description: Favorites returned
+        "401":
+          description: Unauthorized
+  /api/favorites/toggle:
+    post:
+      summary: Toggle product favorite state
+      tags: [Favorites]
+      security:
+        - nextAuthCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [productId]
+              properties:
+                productId:
+                  type: string
+      responses:
+        "200":
+          description: Favorite state changed
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized
+        "500":
+          description: Server error
+  /api/favorites/sync:
+    post:
+      summary: Sync local favorites to user account
+      tags: [Favorites]
+      security:
+        - nextAuthCookie: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [productIds]
+              properties:
+                productIds:
+                  type: array
+                  maxItems: 200
+                  items:
+                    type: string
+      responses:
+        "200":
+          description: Favorites synced
+        "400":
+          description: Bad request
+        "401":
+          description: Unauthorized
+  /api/jobs/fulfill:
+    post:
+      summary: Process pending fulfillments
+      tags: [Jobs]
+      security:
+        - jobsSecret: []
+      parameters:
+        - in: header
+          name: x-jobs-limit
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 25
+      responses:
+        "200":
+          description: Fulfillment job completed
+        "401":
+          description: Invalid jobs secret
+  /api/jobs/sync-digiseller:
+    post:
+      summary: Sync Digiseller prices or catalog
+      tags: [Jobs]
+      security:
+        - jobsSecret: []
+      parameters:
+        - in: header
+          name: x-sync-mode
+          schema:
+            type: string
+            enum: [prices, catalog]
+      responses:
+        "200":
+          description: Sync completed
+        "401":
+          description: Invalid jobs secret
+  /api/locale:
+    post:
+      summary: Set interface locale
+      tags: [Locale]
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [locale]
+              properties:
+                locale:
+                  type: string
+      responses:
+        "200":
+          description: Locale saved
+        "400":
+          description: Invalid locale
+components:
+  securitySchemes:
+    nextAuthCookie:
+      type: apiKey
+      in: cookie
+      name: next-auth.session-token
+    jobsSecret:
+      type: apiKey
+      in: header
+      name: x-jobs-secret

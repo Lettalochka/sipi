@@ -1,33 +1,28 @@
 # Документация разработчика
 
-Документация разработчика создана при помощи `TypeDoc` по ключевым модулям
-проекта `Legal Store`.
+Документация разработчика для проекта `Legal Store` оформлена как API-reference,
+поскольку основная серверная логика доступна через Next.js API routes.
 
-## Охваченные модули
+## Основные файлы
 
-- `src/lib/cart.ts` - работа с корзиной;
-- `src/lib/fulfillment.ts` - процесс выдачи цифрового товара;
-- `src/lib/products.ts` - получение и фильтрация товаров;
-- `src/lib/auth-options.ts` - параметры авторизации;
-- `src/lib/digiseller/client.ts` - клиент интеграции Digiseller;
-- `src/lib/digiseller/checkout.ts` - оформление платежа через Digiseller;
-- `src/lib/digiseller/catalog.ts` - синхронизация каталога;
-- `src/app/actions/cart.ts` - серверные действия корзины.
+- `api_reference.md` - подробное описание API: методы, endpoint, параметры,
+  заголовки, тела запросов, ответы и ошибки.
+- `openapi.yaml` - спецификация OpenAPI 3.0 для маршрутов проекта.
+- `developer_documentation.zip` - архив с дополнительной HTML-документацией,
+  сгенерированной по TypeScript-модулям.
 
-## Как открыть
+## Описанные группы API
 
-Откройте файл:
+- Auth API: регистрация и NextAuth-маршруты.
+- Checkout API: создание платежа.
+- Digiseller API: callback и return URL.
+- Favorites API: получение, переключение и синхронизация избранного.
+- Jobs API: обработка выдачи товара и синхронизация Digiseller.
+- Locale API: смена языка интерфейса.
 
-`generated/index.html`
+## Как использовать
 
-Также приложен архив:
+Для чтения откройте `api_reference.md`.
 
-`developer_documentation.zip`
-
-## Использованный инструмент
-
-Для генерации использовалась команда:
-
-```bash
-npx typedoc --entryPoints src/lib/cart.ts src/lib/fulfillment.ts src/lib/products.ts src/lib/auth-options.ts src/lib/digiseller/client.ts src/lib/digiseller/checkout.ts src/lib/digiseller/catalog.ts src/app/actions/cart.ts --out practice_10/developer_documentation/generated --tsconfig tsconfig.json --skipErrorChecking
-```
+Для импорта в инструменты разработки API используйте `openapi.yaml`, например в
+Swagger Editor, Postman или Insomnia.

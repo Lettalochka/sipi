@@ -7,17 +7,15 @@
 
 ## Документация разработчика
 
-Для генерации документации разработчика используется `TypeDoc`. Инструмент
-анализирует TypeScript-код проекта и формирует HTML-документацию по модулям,
-функциям, типам и экспортируемым сущностям.
+Документация разработчика оформлена как API-документация проекта. В ней описаны
+серверные маршруты Next.js: endpoint, HTTP-методы, параметры, заголовки,
+JSON-тела запросов, ответы и возможные ошибки.
 
-Сгенерированная документация находится в каталоге:
+Основные файлы:
 
-`practice_10/developer_documentation/generated/`
-
-Архив с документацией:
-
-`practice_10/developer_documentation/developer_documentation.zip`
+- `practice_10/developer_documentation/api_reference.md`
+- `practice_10/developer_documentation/openapi.yaml`
+- `practice_10/developer_documentation/developer_documentation.zip`
 
 ## Документация пользователя
 
