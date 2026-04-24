@@ -3,13 +3,26 @@
 Каталог позволяет просматривать цифровые товары, выполнять поиск и выбирать
 подходящий товар.
 
-## Интерфейс каталога
+## HTML-код каталога
 
-![Поиск и главный экран каталога](assets/interface-search.png)
-
-На экране каталога пользователь видит поисковую строку, быстрые категории,
-подборки товаров и карточки популярных позиций. Поиск расположен в центральной
-части страницы, чтобы пользователь мог сразу ввести название продукта.
+```html
+<section class="product-grid" aria-label="Product list">
+  <article class="product-card">
+    <div class="product-cover">Windows 11</div>
+    <div class="product-body">
+      <div class="meta">
+        <span>Windows</span>
+        <strong>$19.99</strong>
+      </div>
+      <p class="product-title">Windows 11 Pro License Key</p>
+      <div class="card-actions">
+        <button class="button">Details</button>
+        <button class="button primary">Add to cart</button>
+      </div>
+    </div>
+  </article>
+</section>
+```
 
 ## Основные действия
 
@@ -20,8 +33,6 @@
 5. Открыть карточку товара для подробного просмотра.
 
 ## Карточка товара
-
-![Карточки товаров](assets/interface-product-cards.png)
 
 В карточке товара отображаются:
 

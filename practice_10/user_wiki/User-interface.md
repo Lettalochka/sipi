@@ -1,55 +1,100 @@
 # Интерфейс пользователя
 
-Эта страница показывает основные элементы пользовательского интерфейса
-`Legal Store` и объясняет, какие действия выполняет пользователь на каждом экране.
-
-## Главная страница
-
-![Главная страница](assets/interface-home.png)
-
-На главной странице расположены:
-
-- верхнее меню навигации;
-- переключатель языка;
-- кнопка корзины;
-- кнопки входа и регистрации;
-- поисковая строка;
-- быстрые категории;
-- подборки товаров;
-- карточки товаров с ценой и кнопкой добавления в корзину.
+В пользовательскую Wiki включен HTML-код интерфейса, чтобы документация показывала
+структуру экранов без скриншотов. Полную HTML-страницу можно открыть из файла
+`user_interface.html`.
 
 ## Верхняя панель
 
-![Верхняя панель](assets/interface-header.png)
+```html
+<header class="header">
+  <nav class="nav">
+    <div class="logo">WinKey</div>
+    <button class="button">Shop</button>
+  </nav>
+  <div class="actions">
+    <span class="pill">Official supply</span>
+    <button class="icon-button" aria-label="Language">EN</button>
+    <button class="icon-button" aria-label="Cart">Cart</button>
+    <button class="button">Log in</button>
+    <button class="button primary">Create account</button>
+  </div>
+</header>
+```
 
-Верхняя панель используется для перехода в магазин, смены языка, открытия корзины,
-входа в аккаунт и регистрации нового пользователя.
+## Поиск и первый экран
 
-## Поиск товара
-
-![Поиск товара](assets/interface-search.png)
-
-Поисковый блок позволяет быстро найти нужный цифровой товар. Под строкой поиска
-размещены быстрые категории, например Windows и Office.
+```html
+<section class="hero">
+  <div class="panel">
+    <span class="pill">Official supply - Processed via Digiseller</span>
+    <h1>Official digital keys. Instant delivery.</h1>
+    <p class="lead">Legal digital goods sourced via official supply and Digiseller partners.</p>
+    <form class="search">
+      <input type="search" placeholder="Search products...">
+      <button class="button primary" type="submit">Search</button>
+    </form>
+  </div>
+</section>
+```
 
 ## Карточка товара
 
-![Карточки товаров](assets/interface-product-cards.png)
+```html
+<article class="product-card">
+  <div class="product-cover">Windows 11</div>
+  <div class="product-body">
+    <div class="meta">
+      <span>Windows</span>
+      <strong>$19.99</strong>
+    </div>
+    <p class="product-title">Windows 11 Pro License Key</p>
+    <div class="card-actions">
+      <button class="button">Details</button>
+      <button class="button primary">Add to cart</button>
+    </div>
+  </div>
+</article>
+```
 
-Карточка товара содержит изображение, категорию, признак официальной поставки,
-цену, название и две основные кнопки: просмотр подробностей и добавление в
-корзину.
+## Минимальные стили интерфейса
 
-## Добавление в корзину
+```html
+<style>
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 24px;
+    font-family: "Segoe UI", Arial, sans-serif;
+  }
 
-![Кнопки добавления в корзину](assets/interface-cart-buttons.png)
+  .header,
+  .actions,
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
 
-Кнопка `Add to cart` добавляет выбранный товар в корзину. После этого пользователь
-может открыть корзину через иконку в верхней панели и перейти к оформлению заказа.
+  .panel,
+  .product-card {
+    background: #ffffff;
+    border: 1px solid #dbe7ee;
+    border-radius: 20px;
+  }
 
-## Нижняя часть страницы
+  .button {
+    border: 1px solid #dbe7ee;
+    border-radius: 999px;
+    padding: 10px 16px;
+    font-weight: 700;
+  }
 
-![Нижняя часть интерфейса](assets/interface-footer.png)
-
-Внизу страницы размещаются дополнительные ссылки, информация о магазине и
-краткие преимущества сервиса.
+  .button.primary {
+    color: #ffffff;
+    background: #0b4a6f;
+    border-color: #0b4a6f;
+  }
+</style>
+```

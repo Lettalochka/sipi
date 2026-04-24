@@ -14,6 +14,7 @@ JSON-тела запросов, ответы и возможные ошибки.
 Основные файлы:
 
 - `practice_10/developer_documentation/api_reference.md`
+- `practice_10/developer_documentation/api_reference.html`
 - `practice_10/developer_documentation/openapi.yaml`
 - `practice_10/developer_documentation/developer_documentation.zip`
 

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Store API Reference</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --panel: #ffffff;
+      --ink: #111827;
+      --muted: #64748b;
+      --line: #d7e0ea;
+      --blue: #0b4a6f;
+      --green: #058762;
+      --orange: #b45309;
+      --red: #b42318;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.55;
+      color: var(--ink);
+      background: var(--bg);
+    }
+
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 22px 64px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 40px;
+      line-height: 1.1;
+    }
+
+    h2 {
+      margin: 36px 0 14px;
+      font-size: 26px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .hero,
+    .endpoint,
+    .table-wrap {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, .06);
+    }
+
+    .hero {
+      margin-bottom: 24px;
+    }
+
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 6px 10px;
+      color: var(--blue);
+      background: #e7f2f7;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    th,
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #eaf1f7;
+      color: #16324f;
+      font-weight: 800;
+    }
+
+    code,
+    pre {
+      font-family: "SFMono-Regular", Consolas, monospace;
+    }
+
+    code {
+      color: #0f4f78;
+      background: #edf5fa;
+      border-radius: 6px;
+      padding: 2px 5px;
+    }
+
+    pre {
+      overflow: auto;
+      margin: 12px 0 0;
+      padding: 16px;
+      color: #e5eef8;
+      background: #0f172a;
+      border-radius: 12px;
+    }
+
+    .endpoint {
+      margin: 16px 0;
+    }
+
+    .endpoint-head {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .method {
+      border-radius: 8px;
+      padding: 5px 9px;
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .get {
+      background: var(--green);
+    }
+
+    .post {
+      background: var(--blue);
+    }
+
+    .path {
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .access {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .note {
+      padding: 12px 14px;
+      border-left: 4px solid var(--orange);
+      border-radius: 10px;
+      background: #fff8ed;
+      color: #713f12;
+    }
+
+    @media (max-width: 760px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .access {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>Legal Store API Reference</h1>
+      <p>Документация разработчика по серверным API проекта. Маршруты реализованы
+        через Next.js Route Handlers в каталоге <code>src/app/api</code>.</p>
+      <div class="badges">
+        <span class="badge">Base URL: http://localhost:3000</span>
+        <span class="badge">Format: JSON</span>
+        <span class="badge">Auth: NextAuth cookie</span>
+        <span class="badge">Jobs auth: x-jobs-secret</span>
+      </div>
+    </section>
+
+    <h2>API endpoints</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Method</th>
+            <th>Endpoint</th>
+            <th>Description</th>
+            <th>Access</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>GET/POST</td><td><code>/api/auth/[...nextauth]</code></td><td>NextAuth service routes</td><td>Public/session</td></tr>
+          <tr><td>POST</td><td><code>/api/auth/register</code></td><td>User registration</td><td>Public</td></tr>
+          <tr><td>POST</td><td><code>/api/checkout/create-payment</code></td><td>Create order and payment link</td><td>Public/session</td></tr>
+          <tr><td>POST</td><td><code>/api/digiseller/callback</code></td><td>Digiseller payment webhook</td><td>Digiseller</td></tr>
+          <tr><td>GET</td><td><code>/api/digiseller/return</code></td><td>Payment return URL</td><td>Public</td></tr>
+          <tr><td>GET</td><td><code>/api/favorites</code></td><td>Read favorite products</td><td>User session</td></tr>
+          <tr><td>POST</td><td><code>/api/favorites/toggle</code></td><td>Toggle favorite product</td><td>User session</td></tr>
+          <tr><td>POST</td><td><code>/api/favorites/sync</code></td><td>Sync local favorites</td><td>User session</td></tr>
+          <tr><td>POST</td><td><code>/api/jobs/fulfill</code></td><td>Process pending fulfillments</td><td>Service secret</td></tr>
+          <tr><td>POST</td><td><code>/api/jobs/sync-digiseller</code></td><td>Sync Digiseller prices/catalog</td><td>Service secret</td></tr>
+          <tr><td>POST</td><td><code>/api/locale</code></td><td>Set interface locale</td><td>Public</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Auth API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/auth/register</span>
+        <span class="access">Public, rate limited</span>
+      </div>
+      <p>Создает нового пользователя. Пароль хешируется перед сохранением.</p>
+      <div class="grid">
+        <div>
+          <h3>Request</h3>
+          <pre>{
+  "email": "user@example.com",
+  "password": "password123",
+  "name": "User"
+}</pre>
+        </div>
+        <div>
+          <h3>Response 200</h3>
+          <pre>{
+  "ok": true,
+  "userId": "clx..."
+}</pre>
+        </div>
+      </div>
+      <p class="note">Ошибки: 400 invalid, 409 email_taken, 429 rate_limited.</p>
+    </article>
+
+    <h2>Checkout API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/checkout/create-payment</span>
+        <span class="access">Public/session, rate limited</span>
+      </div>
+      <p>Создает заказ и возвращает ссылку на оплату Digiseller.</p>
+      <div class="grid">
+        <div>
+          <h3>Request</h3>
+          <pre>{
+  "email": "buyer@example.com",
+  "locale": "ru"
+}</pre>
+        </div>
+        <div>
+          <h3>Response 200</h3>
+          <pre>{
+  "ok": true,
+  "orderId": "clx...",
+  "redirectUrl": "https://oplata.info/..."
+}</pre>
+        </div>
+      </div>
+    </article>
+
+    <h2>Favorites API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method get">GET</span>
+        <span class="path">/api/favorites?ids=product_1,product_2</span>
+        <span class="access">User session</span>
+      </div>
+      <p>Возвращает избранные товары пользователя или boolean-карту по переданным ID.</p>
+      <pre>{
+  "ok": true,
+  "liked": {
+    "product_1": true,
+    "product_2": false
+  }
+}</pre>
+    </article>
+
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/favorites/toggle</span>
+        <span class="access">User session</span>
+      </div>
+      <p>Добавляет товар в избранное или удаляет его из избранного.</p>
+      <div class="grid">
+        <pre>{
+  "productId": "product_id"
+}</pre>
+        <pre>{
+  "ok": true,
+  "liked": true
+}</pre>
+      </div>
+    </article>
+
+    <h2>Digiseller API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/digiseller/callback</span>
+        <span class="access">Signed webhook</span>
+      </div>
+      <p>Проверяет HMAC-подпись, сохраняет webhook-событие и переводит заказ в
+        статус <code>FULFILLING</code>.</p>
+      <pre>{
+  "amount": "24.99",
+  "currency": "USD",
+  "invoice_id": "123456",
+  "status": "paid",
+  "signature": "hex_hmac_signature",
+  "cf1": "order_id"
+}</pre>
+      <p class="note">Signature string:
+        <code>amount:&lt;amount&gt;;currency:&lt;currency&gt;;invoice_id:&lt;invoice_id&gt;;status:&lt;status&gt;;</code>
+      </p>
+    </article>
+
+    <h2>Jobs API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/jobs/fulfill</span>
+        <span class="access">Header x-jobs-secret</span>
+      </div>
+      <p>Запускает обработку ожидающих выдач цифрового товара.</p>
+      <pre>curl -X POST http://localhost:3000/api/jobs/fulfill \
+  -H "x-jobs-secret: $JOBS_SECRET" \
+  -H "x-jobs-limit: 10"</pre>
+    </article>
+
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/jobs/sync-digiseller</span>
+        <span class="access">Header x-jobs-secret</span>
+      </div>
+      <p>Синхронизирует цены или каталог Digiseller. Режим выбирается заголовком
+        <code>x-sync-mode</code>: <code>prices</code> или <code>catalog</code>.</p>
+    </article>
+
+    <h2>Locale API</h2>
+    <article class="endpoint">
+      <div class="endpoint-head">
+        <span class="method post">POST</span>
+        <span class="path">/api/locale</span>
+        <span class="access">Public</span>
+      </div>
+      <p>Сохраняет выбранный язык интерфейса в cookie <code>locale</code>.</p>
+      <pre>{
+  "locale": "ru"
+}</pre>
+    </article>
+  </main>
+</body>
+</html>

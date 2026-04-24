@@ -1,8 +1,13 @@
 # Регистрация и вход
 
-## Интерфейс входа
+## HTML-код входа и регистрации
 
-![Верхняя панель с кнопками входа и регистрации](assets/interface-header.png)
+```html
+<div class="actions">
+  <button class="button">Log in</button>
+  <button class="button primary">Create account</button>
+</div>
+```
 
 Кнопки `Log in` и `Create account` расположены в правой части верхней панели.
 Пользователь может перейти к входу в существующий аккаунт или создать новую
