@@ -3,15 +3,11 @@
 Страница заказа показывает текущее состояние покупки и результат выдачи цифрового
 товара.
 
-## HTML-код статуса заказа
+## HTML-интерфейс статуса заказа
 
-```html
-<section class="order-status">
-  <h1>Order status</h1>
-  <span class="status status-delivered">DELIVERED</span>
-  <p>Your digital key is available on this page.</p>
-</section>
-```
+Живой HTML-макет страницы заказа находится в файле:
+
+[order_status.html](order_status.html)
 
 После оплаты пользователь возвращается к странице заказа. Цифровой товар
 становится доступен после подтверждения платежа.

@@ -3,26 +3,11 @@
 Каталог позволяет просматривать цифровые товары, выполнять поиск и выбирать
 подходящий товар.
 
-## HTML-код каталога
+## HTML-интерфейс каталога
 
-```html
-<section class="product-grid" aria-label="Product list">
-  <article class="product-card">
-    <div class="product-cover">Windows 11</div>
-    <div class="product-body">
-      <div class="meta">
-        <span>Windows</span>
-        <strong>$19.99</strong>
-      </div>
-      <p class="product-title">Windows 11 Pro License Key</p>
-      <div class="card-actions">
-        <button class="button">Details</button>
-        <button class="button primary">Add to cart</button>
-      </div>
-    </div>
-  </article>
-</section>
-```
+Живой HTML-макет каталога находится в файле:
+
+[catalog.html](catalog.html)
 
 ## Основные действия
 

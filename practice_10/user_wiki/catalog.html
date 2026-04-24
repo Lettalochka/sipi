@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Store - Catalog</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #0f172a;
+      background: #eef6f8;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .search {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    input {
+      flex: 1;
+      min-width: 0;
+      border: 1px solid #dbe7ee;
+      border-radius: 999px;
+      padding: 14px 18px;
+      font: inherit;
+    }
+
+    .button {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      color: #ffffff;
+      background: #0b4a6f;
+      font-weight: 800;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      overflow: hidden;
+      border: 1px solid #dbe7ee;
+      border-radius: 18px;
+      background: #ffffff;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, .08);
+    }
+
+    .cover {
+      display: grid;
+      place-items: center;
+      height: 170px;
+      color: #ffffff;
+      background: linear-gradient(135deg, #0b4a6f, #149bd3);
+      font-size: 26px;
+      font-weight: 900;
+    }
+
+    .body {
+      padding: 18px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      color: #64748b;
+    }
+
+    .title {
+      min-height: 48px;
+      font-weight: 900;
+    }
+
+    .actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .secondary {
+      color: #0f172a;
+      background: #ffffff;
+      border: 1px solid #dbe7ee;
+    }
+
+    @media (max-width: 780px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Каталог товаров</h1>
+    <form class="search">
+      <input type="search" placeholder="Search products...">
+      <button class="button">Search</button>
+    </form>
+
+    <section class="grid">
+      <article class="card">
+        <div class="cover">Windows 11</div>
+        <div class="body">
+          <div class="meta"><span>Windows</span><strong>$19.99</strong></div>
+          <p class="title">Windows 11 Pro License Key</p>
+          <div class="actions">
+            <button class="button secondary">Details</button>
+            <button class="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="cover">Office 2021</div>
+        <div class="body">
+          <div class="meta"><span>Office</span><strong>$24.99</strong></div>
+          <p class="title">Microsoft Office 2021 Professional Plus</p>
+          <div class="actions">
+            <button class="button secondary">Details</button>
+            <button class="button">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

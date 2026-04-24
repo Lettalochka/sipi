@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Store - Cart</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #0f172a;
+      background: #f4f7fb;
+    }
+
+    .page {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    .cart {
+      display: grid;
+      gap: 14px;
+    }
+
+    .item,
+    .summary {
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      gap: 16px;
+      align-items: center;
+      border: 1px solid #dbe7ee;
+      border-radius: 16px;
+      padding: 18px;
+      background: #ffffff;
+    }
+
+    .summary {
+      grid-template-columns: 1fr auto;
+    }
+
+    .muted {
+      color: #64748b;
+    }
+
+    .qty {
+      border: 1px solid #dbe7ee;
+      border-radius: 10px;
+      padding: 8px 12px;
+    }
+
+    .button {
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 18px;
+      color: #ffffff;
+      background: #0b4a6f;
+      font-weight: 800;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Корзина</h1>
+    <section class="cart">
+      <article class="item">
+        <div>
+          <strong>Windows 11 Pro License Key</strong>
+          <div class="muted">Digital key, instant delivery</div>
+        </div>
+        <div class="qty">Qty: 1</div>
+        <strong>$19.99</strong>
+      </article>
+
+      <div class="summary">
+        <strong>Total: $19.99</strong>
+        <button class="button">Checkout</button>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

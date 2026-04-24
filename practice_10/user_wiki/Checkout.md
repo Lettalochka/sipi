@@ -2,15 +2,11 @@
 
 Оформление заказа используется для перехода к оплате и фиксации выбранных товаров.
 
-## HTML-код блока оформления
+## HTML-интерфейс оформления
 
-```html
-<section class="checkout-flow">
-  <div class="step">Choose product</div>
-  <div class="step">Pay via Digiseller</div>
-  <div class="step">Receive digital key</div>
-</section>
-```
+Живой HTML-макет оформления заказа находится в файле:
+
+[checkout.html](checkout.html)
 
 Этот блок показывает общий сценарий покупки: выбрать товар, оплатить заказ и
 получить цифровой ключ.

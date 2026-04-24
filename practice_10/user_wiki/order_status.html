@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Store - Order Status</title>
+  <style>
+    body {
+      margin: 0;
+      display: grid;
+      min-height: 100vh;
+      place-items: center;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #0f172a;
+      background: #eef6f8;
+    }
+
+    .order {
+      width: min(680px, calc(100vw - 32px));
+      border: 1px solid #dbe7ee;
+      border-radius: 20px;
+      padding: 28px;
+      background: #ffffff;
+      box-shadow: 0 18px 44px rgba(15, 23, 42, .1);
+    }
+
+    .status {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 7px 12px;
+      color: #00735b;
+      background: #dcfce7;
+      font-weight: 900;
+    }
+
+    .key {
+      margin-top: 18px;
+      border: 1px dashed #8fb7c9;
+      border-radius: 14px;
+      padding: 18px;
+      background: #f8fbfd;
+      font-family: Consolas, monospace;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+  <section class="order">
+    <h1>Order #1024</h1>
+    <span class="status">DELIVERED</span>
+    <p>Оплата подтверждена. Цифровой ключ доступен на этой странице.</p>
+    <div class="key">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</div>
+  </section>
+</body>
+</html>

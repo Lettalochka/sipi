@@ -1,13 +1,10 @@
 # Регистрация и вход
 
-## HTML-код входа и регистрации
+## HTML-интерфейс входа
 
-```html
-<div class="actions">
-  <button class="button">Log in</button>
-  <button class="button primary">Create account</button>
-</div>
-```
+Живой HTML-макет входа находится в файле:
+
+[auth.html](auth.html)
 
 Кнопки `Log in` и `Create account` расположены в правой части верхней панели.
 Пользователь может перейти к входу в существующий аккаунт или создать новую

@@ -7,17 +7,16 @@
 
 ## Интерфейс
 
-В Wiki добавлен HTML-код пользовательского интерфейса. Полная HTML-страница
-находится в файле `user_interface.html`, а основные фрагменты приведены на
-странице [Интерфейс пользователя](User-interface.md).
+В Wiki добавлены живые HTML-страницы интерфейса с CSS. Их можно открыть как
+обычные страницы:
 
-```html
-<main class="page">
-  <header class="header">...</header>
-  <section class="hero">...</section>
-  <section class="product-grid">...</section>
-</main>
-```
+- [user_interface.html](user_interface.html) - общий пользовательский интерфейс;
+- [auth.html](auth.html) - вход пользователя;
+- [catalog.html](catalog.html) - каталог товаров;
+- [cart.html](cart.html) - корзина;
+- [checkout.html](checkout.html) - оформление заказа;
+- [order_status.html](order_status.html) - статус заказа;
+- [admin_panel.html](admin_panel.html) - административная панель.
 
 ## Разделы Wiki
 
