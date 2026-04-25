@@ -12,13 +12,14 @@
 
 ## Основные разделы
 
-1. [Login-and-Registration](Registration-and-login.md)
-2. [User-Interface](User-interface.md)
-3. [Product-Catalog](Product-catalog.md)
-4. [Cart](Cart.md)
-5. [Checkout](Checkout.md)
-6. [Order-Details](Order-details.md)
-7. [Admin-Panel](Admin-panel.md)
+1. [Login-and-Registration](Registration-and-login)
+2. [User-Interface](User-interface)
+3. [Interface-HTML-CSS](Interface-HTML-CSS)
+4. [Product-Catalog](Product-catalog)
+5. [Cart](Cart)
+6. [Checkout](Checkout)
+7. [Order-Details](Order-details)
+8. [Admin-Panel](Admin-panel)
 
 ## Общий сценарий работы
 

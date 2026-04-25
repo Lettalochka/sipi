@@ -36,6 +36,26 @@
 После проверки корзины пользователь нажимает кнопку оформления заказа и переходит
 к следующему этапу.
 
+## HTML-код корзины
+
+```html
+<section class="cart">
+  <article class="cart-item">
+    <div>
+      <strong>Windows 11 Pro License Key</strong>
+      <p>Digital key, instant delivery</p>
+    </div>
+    <span>Qty: 1</span>
+    <strong>$19.99</strong>
+  </article>
+
+  <footer class="cart-summary">
+    <strong>Total: $19.99</strong>
+    <button type="button">Checkout</button>
+  </footer>
+</section>
+```
+
 ## Возможные проблемы
 
 ### Корзина пуста

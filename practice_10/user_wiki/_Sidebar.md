@@ -1,28 +1,29 @@
 # Pages
 
-- [Home](Home.md)
-- [Login-and-Registration](Registration-and-login.md)
-- [User-Interface](User-interface.md)
-- [Product-Catalog](Product-catalog.md)
+- [Home](Home)
+- [Login-and-Registration](Registration-and-login)
+- [User-Interface](User-interface)
+- [Interface-HTML-CSS](Interface-HTML-CSS)
+- [Product-Catalog](Product-catalog)
   - Назначение раздела
   - Поиск товара
   - Просмотр карточки товара
   - Добавление в корзину
   - Возможные проблемы
-- [Cart](Cart.md)
+- [Cart](Cart)
   - Просмотр корзины
   - Изменение количества
   - Удаление товара
   - Переход к оформлению
-- [Checkout](Checkout.md)
+- [Checkout](Checkout)
   - Проверка заказа
   - Оплата через Digiseller
   - Результат оплаты
-- [Order-Details](Order-details.md)
+- [Order-Details](Order-details)
   - Статусы заказа
   - Получение цифрового товара
   - Возможные проблемы
-- [Admin-Panel](Admin-panel.md)
+- [Admin-Panel](Admin-panel)
   - Управление товарами
   - Управление заказами
   - Журнал выдачи

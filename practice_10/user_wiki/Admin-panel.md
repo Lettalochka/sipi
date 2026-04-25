@@ -18,6 +18,31 @@
 - настраивать признаки популярности;
 - указывать параметры интеграции с Digiseller.
 
+## HTML-код административной таблицы
+
+```html
+<table class="admin-table">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Provider</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows 11 Pro License Key</td>
+      <td>Windows</td>
+      <td>$19.99</td>
+      <td>Active</td>
+      <td>Digiseller</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 ## Управление категориями
 
 В разделе категорий администратор может создавать и изменять категории товаров.
