@@ -1,0 +1,28 @@
+# Pages
+
+- [Home](Home.md)
+- [Login-and-Registration](Registration-and-login.md)
+- [User-Interface](User-interface.md)
+- [Product-Catalog](Product-catalog.md)
+  - Назначение раздела
+  - Поиск товара
+  - Просмотр карточки товара
+  - Добавление в корзину
+  - Возможные проблемы
+- [Cart](Cart.md)
+  - Просмотр корзины
+  - Изменение количества
+  - Удаление товара
+  - Переход к оформлению
+- [Checkout](Checkout.md)
+  - Проверка заказа
+  - Оплата через Digiseller
+  - Результат оплаты
+- [Order-Details](Order-details.md)
+  - Статусы заказа
+  - Получение цифрового товара
+  - Возможные проблемы
+- [Admin-Panel](Admin-panel.md)
+  - Управление товарами
+  - Управление заказами
+  - Журнал выдачи
