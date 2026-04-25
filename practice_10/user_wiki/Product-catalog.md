@@ -40,24 +40,14 @@
 - сведения о поставке;
 - кнопка добавления в корзину.
 
-## HTML-код карточки товара
+## Макет карточки товара
 
-```html
-<article class="product-card">
-  <div class="product-image">Windows 11</div>
-  <div class="product-content">
-    <div class="product-meta">
-      <span>Windows</span>
-      <strong>$19.99</strong>
-    </div>
-    <h2>Windows 11 Pro License Key</h2>
-    <div class="product-actions">
-      <a href="/product/windows-11-pro">Details</a>
-      <button type="button">Add to cart</button>
-    </div>
-  </div>
-</article>
-```
+| Windows 11 Pro License Key |  |
+| --- | --- |
+| Категория | Windows |
+| Поставка | Official supply |
+| Цена | `$19.99` |
+| Действия | `Details` · `Add to cart` |
 
 ## Добавление в корзину
 

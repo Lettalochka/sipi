@@ -36,25 +36,14 @@
 После проверки корзины пользователь нажимает кнопку оформления заказа и переходит
 к следующему этапу.
 
-## HTML-код корзины
+## Макет корзины
 
-```html
-<section class="cart">
-  <article class="cart-item">
-    <div>
-      <strong>Windows 11 Pro License Key</strong>
-      <p>Digital key, instant delivery</p>
-    </div>
-    <span>Qty: 1</span>
-    <strong>$19.99</strong>
-  </article>
+| Товар | Количество | Цена |
+| --- | ---: | ---: |
+| Windows 11 Pro License Key | 1 | `$19.99` |
+| **Итого** |  | **`$19.99`** |
 
-  <footer class="cart-summary">
-    <strong>Total: $19.99</strong>
-    <button type="button">Checkout</button>
-  </footer>
-</section>
-```
+Доступное действие: `Checkout`.
 
 ## Возможные проблемы
 

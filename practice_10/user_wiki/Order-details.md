@@ -47,13 +47,11 @@
 
 Пользователь получает цифровой товар или информацию о текущем состоянии заказа.
 
-## HTML-код статуса заказа
+## Макет статуса заказа
 
-```html
-<section class="order-status">
-  <h1>Order #1024</h1>
-  <span class="status status-delivered">DELIVERED</span>
-  <p>Оплата подтверждена. Цифровой ключ доступен на этой странице.</p>
-  <div class="digital-key">XXXXX-XXXXX-XXXXX-XXXXX-XXXXX</div>
-</section>
-```
+| Поле | Значение |
+| --- | --- |
+| Order | `#1024` |
+| Status | `DELIVERED` |
+| Delivery | Цифровой ключ доступен |
+| Key | `XXXXX-XXXXX-XXXXX-XXXXX-XXXXX` |

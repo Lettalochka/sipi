@@ -51,24 +51,10 @@
 
 После успешной оплаты заказ передается на выдачу цифрового товара.
 
-## HTML-код блока оформления
+## Макет блока оформления
 
-```html
-<section class="checkout-flow">
-  <div class="checkout-step">
-    <strong>1</strong>
-    <h2>Choose</h2>
-    <p>Пользователь выбирает цифровой товар.</p>
-  </div>
-  <div class="checkout-step">
-    <strong>2</strong>
-    <h2>Pay</h2>
-    <p>Переход к оплате через Digiseller.</p>
-  </div>
-  <div class="checkout-step">
-    <strong>3</strong>
-    <h2>Receive</h2>
-    <p>Ключ доступен после подтверждения оплаты.</p>
-  </div>
-</section>
-```
+| Шаг | Действие | Результат |
+| --- | --- | --- |
+| 1 | Choose | Пользователь выбирает цифровой товар |
+| 2 | Pay | Переход к оплате через Digiseller |
+| 3 | Receive | Ключ доступен после подтверждения оплаты |

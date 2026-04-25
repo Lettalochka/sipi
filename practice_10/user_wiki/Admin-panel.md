@@ -18,30 +18,12 @@
 - настраивать признаки популярности;
 - указывать параметры интеграции с Digiseller.
 
-## HTML-код административной таблицы
+## Макет административной таблицы
 
-```html
-<table class="admin-table">
-  <thead>
-    <tr>
-      <th>Product</th>
-      <th>Category</th>
-      <th>Price</th>
-      <th>Status</th>
-      <th>Provider</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Windows 11 Pro License Key</td>
-      <td>Windows</td>
-      <td>$19.99</td>
-      <td>Active</td>
-      <td>Digiseller</td>
-    </tr>
-  </tbody>
-</table>
-```
+| Product | Category | Price | Status | Provider |
+| --- | --- | ---: | --- | --- |
+| Windows 11 Pro License Key | Windows | `$19.99` | Active | Digiseller |
+| Microsoft Office 2021 Professional Plus | Office | `$24.99` | Active | Digiseller |
 
 ## Управление категориями
 

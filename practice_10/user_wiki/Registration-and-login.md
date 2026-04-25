@@ -30,20 +30,13 @@
 
 После успешного входа пользователь возвращается к работе с магазином.
 
-## HTML-код формы входа
+## Макет формы входа
 
-```html
-<form class="auth-form">
-  <h1>Log in</h1>
-  <label>Email</label>
-  <input type="email" name="email" placeholder="user@example.com">
-
-  <label>Password</label>
-  <input type="password" name="password" placeholder="password">
-
-  <button type="submit">Log in</button>
-</form>
-```
+| Поле | Значение |
+| --- | --- |
+| Email | `user@example.com` |
+| Password | `••••••••` |
+| Действие | `Log in` |
 
 ## Возможные проблемы
 
