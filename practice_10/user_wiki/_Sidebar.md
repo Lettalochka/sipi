@@ -3,7 +3,7 @@
 - [Home](Home)
 - [Login-and-Registration](Registration-and-login)
 - [User-Interface](User-interface)
-- [Interface-HTML-CSS](Interface-HTML-CSS)
+- [Interface-Screenshots](Interface-HTML-CSS)
 - [Product-Catalog](Product-catalog)
   - Назначение раздела
   - Поиск товара

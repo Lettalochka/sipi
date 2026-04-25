@@ -10,11 +10,15 @@
 каталога, работа с корзиной, оформление заказа, просмотр результата заказа и
 администрирование.
 
+## Скриншот интерфейса
+
+![Главная страница Legal Store](images/wiki-home.png)
+
 ## Основные разделы
 
 1. [Login-and-Registration](Registration-and-login)
 2. [User-Interface](User-interface)
-3. [Interface-HTML-CSS](Interface-HTML-CSS)
+3. [Interface-Screenshots](Interface-HTML-CSS)
 4. [Product-Catalog](Product-catalog)
 5. [Cart](Cart)
 6. [Checkout](Checkout)

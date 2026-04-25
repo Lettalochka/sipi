@@ -33,9 +33,11 @@
 
 ## Макеты интерфейса
 
-Примеры визуальных макетов вынесены в отдельный раздел:
+Основные визуальные примеры интерфейса вынесены в отдельный раздел:
 
-[Interface-HTML-CSS](Interface-HTML-CSS)
+[Interface-Screenshots](Interface-HTML-CSS)
+
+![Главный экран Legal Store](images/wiki-home.png)
 
 ## Карточка товара
 
