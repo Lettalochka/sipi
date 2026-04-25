@@ -7,7 +7,7 @@
 
 ## Скриншот интерфейса
 
-![Оформление заказа Legal Store](images/wiki-checkout.png)
+![Оформление заказа WinKey](images/wiki-checkout.png)
 
 ## Проверка заказа
 

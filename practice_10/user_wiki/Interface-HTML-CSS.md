@@ -2,13 +2,13 @@
 
 ## Назначение раздела
 
-Этот раздел показывает визуальные скриншоты основных экранов Legal Store.
+Этот раздел показывает визуальные скриншоты основных экранов WinKey.
 Скриншоты подготовлены из HTML/CSS-макетов интерфейса и вставлены в Wiki как
 изображения, чтобы пользователь видел внешний вид страниц, а не исходный код.
 
 ## Главный экран
 
-![Главный экран Legal Store](images/wiki-home.png)
+![Главный экран WinKey](images/wiki-home.png)
 
 ## Вход и регистрация
 
@@ -16,23 +16,23 @@
 
 ## Каталог товаров
 
-![Каталог товаров Legal Store](images/wiki-catalog.png)
+![Каталог товаров WinKey](images/wiki-catalog.png)
 
 ## Корзина
 
-![Корзина Legal Store](images/wiki-cart.png)
+![Корзина WinKey](images/wiki-cart.png)
 
 ## Оформление заказа
 
-![Оформление заказа Legal Store](images/wiki-checkout.png)
+![Оформление заказа WinKey](images/wiki-checkout.png)
 
 ## Детали заказа
 
-![Детали заказа Legal Store](images/wiki-order.png)
+![Детали заказа WinKey](images/wiki-order.png)
 
 ## Административная панель
 
-![Административная панель Legal Store](images/wiki-admin.png)
+![Административная панель WinKey](images/wiki-admin.png)
 
 ## Результат
 

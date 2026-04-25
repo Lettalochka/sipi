@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Legal Store API
+  title: WinKey API
   version: 1.0.0
-  description: API documentation for the Legal Store Next.js application.
+  description: API documentation for the WinKey Next.js application.
 servers:
   - url: http://localhost:3000
 paths:

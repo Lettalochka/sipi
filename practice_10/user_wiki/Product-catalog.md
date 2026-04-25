@@ -8,7 +8,7 @@
 
 ## Скриншот интерфейса
 
-![Каталог товаров Legal Store](images/wiki-catalog.png)
+![Каталог товаров WinKey](images/wiki-catalog.png)
 
 ## Поиск товара
 

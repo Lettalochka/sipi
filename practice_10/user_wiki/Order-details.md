@@ -7,7 +7,7 @@
 
 ## Скриншот интерфейса
 
-![Детали заказа Legal Store](images/wiki-order.png)
+![Детали заказа WinKey](images/wiki-order.png)
 
 ## Просмотр заказа
 

@@ -7,7 +7,7 @@
 
 ## Скриншот интерфейса
 
-![Административная панель Legal Store](images/wiki-admin.png)
+![Административная панель WinKey](images/wiki-admin.png)
 
 ## Управление товарами
 

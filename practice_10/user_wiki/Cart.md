@@ -8,7 +8,7 @@
 
 ## Скриншот интерфейса
 
-![Корзина Legal Store](images/wiki-cart.png)
+![Корзина WinKey](images/wiki-cart.png)
 
 ## Просмотр корзины
 
